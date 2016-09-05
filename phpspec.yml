@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: torrefuerte
+        psr4_prefix: torrefuerte
+        src_path: app
