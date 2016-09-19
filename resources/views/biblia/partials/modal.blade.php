@@ -179,30 +179,34 @@
                                 aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="accionesModalLabel">Elija una opción</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body">                    
                     {!! Form::open(['url' => '', 'id' => 'opciones_form']) !!}
                         <input type="hidden" name="versiculo_id">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-show-versiones"
-                                data-action="{{ url('biblia/mostrarversiones') }}" >
-                            Ver Otras Versiones
-                        </button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-show-comentarios"
-                                data-action="{{ url('biblia/mostrar-comentarios') }}" >
-                            Ver Comentarios
-                        </button>
-                        @if(is_login())
-                            <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-add-comentario" >
-                                Comentar Verículo
+                        <div class="list-group">
+                            <button type="button" class="ancho-todo list-group-item list-group-item-success" data-dismiss="modal" id="btn-show-versiones"
+                                    data-action="{{ url('biblia/mostrarversiones') }}" >
+                                Ver Otras Versiones
                             </button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-add-referencia" >
-                                Agregar Referencia
+                            <button type="button" class="ancho-todo list-group-item list-group-item-warning" data-dismiss="modal" id="btn-show-comentarios"
+                                    data-action="{{ url('biblia/mostrar-comentarios') }}" >
+                                Ver Comentarios
                             </button>
-                        @endif
-                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-list-referencia"
-                                data-action="{{ url('biblia/referencia/listar') }}" >
-                            Ver Referencias
-                        </button>
-                    {!! Form::close() !!}
+                            @if(is_login())
+                                <button type="button" class="ancho-todo list-group-item list-group-item-warning" data-dismiss="modal" id="btn-add-comentario" >
+                                    Comentar Verículo
+                                </button>                                
+                            @endif
+                            <button type="button" class="ancho-todo list-group-item list-group-item-info" data-dismiss="modal" id="btn-list-referencia"
+                                    data-action="{{ url('biblia/referencia/listar') }}" >
+                                Ver Referencias
+                            </button>
+                            @if (is_login())
+                                <button type="button" class="ancho-todo list-group-item list-group-item-info" data-dismiss="modal" id="btn-add-referencia" >
+                                    Agregar Referencia
+                                </button>
+                            @endif
+                        </div>                                           
+                    {!! Form::close() !!}                     
                 </div>
             </div>
         </div>
