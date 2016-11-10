@@ -4,7 +4,7 @@
             <!-- copyright -->
             <div class="col-sm-12">
                 <h5><i class="fa fa-copyright text-theme-primary"></i> 
-                    2016 - “ ... de gracia recibisteis, dad de gracia.”
+                    2016 - Creado por <a href="http://elbinfr.esy.es/" target="_blank">Elbin Flores</a>
                 </h5>
             </div>            
         </div>
