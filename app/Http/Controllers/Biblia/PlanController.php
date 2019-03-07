@@ -159,7 +159,7 @@ class PlanController extends Controller
         {
             $lectura = Lectura::whereSlug($slug)->first();
 
-            if(is_null($lectura) || (count($lectura) < 1)){
+            if (is_null($lectura)) {
                 abort(404);//Pagina no encontrada
             }
 

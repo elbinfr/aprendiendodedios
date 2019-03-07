@@ -104,8 +104,7 @@ class ArticuloController extends Controller
     	{
     		$articulo = Articulo::whereSlug($slug)->first();
 
-    		if(is_null($articulo) || (count($articulo) < 1))
-    		{
+    		if (is_null($articulo)) {
                 abort(404);//Pagina no encontrada
             }
 
@@ -140,8 +139,7 @@ class ArticuloController extends Controller
                             ->where('user_id', current_user()->id)
                             ->first();
 
-    		if(is_null($articulo) || (count($articulo) < 1))
-    		{
+    		if (is_null($articulo)) {
                 $errors = collect(['El art&iacute;culo no existe o no te pertenece.']);
                 return redirect('area-espiritual/mis-articulos')->withErrors($errors);
             }
@@ -171,8 +169,7 @@ class ArticuloController extends Controller
                             ->where('user_id', current_user()->id)
                             ->first();
 
-    		if(is_null($articulo) || (count($articulo) < 1))
-    		{
+    		if (is_null($articulo)) {
                 $errors = collect(['El art&iacute;culo no existe o no te pertenece.']);
                 return redirect('area-espiritual/mis-articulos')->withErrors($errors);
             }
